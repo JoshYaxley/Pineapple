@@ -3,6 +3,7 @@
 #include "ParallaxBackground.h"
 #include "Resource.h"
 #include "Floor.h"
+#include "Player.h"
 
 int pa::Main(pa::Arguments* arguments)
 {
@@ -31,6 +32,7 @@ int pa::Main(pa::Arguments* arguments)
 	{
 		world.create<Floor>(g_resource.floor, x + 8, height - 16, 10);
 	}
+	world.create<Player>(g_resource.playerRunning, 64, height - 48);
 
 	// Process main loop
 	while (true)
