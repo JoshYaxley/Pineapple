@@ -10,5 +10,7 @@ void Resource::create(std::shared_ptr<pa::Platform> platform)
 	background3 = platform->getGraphics()->createTexture("background3.png");
 	background4 = platform->getGraphics()->createTexture("background4.png");
 
+	floor = platform->getGraphics()->createTexture("floor.png");
+
 	playerRunning = platform->getGraphics()->createTexture("playerRunning.png");
 }

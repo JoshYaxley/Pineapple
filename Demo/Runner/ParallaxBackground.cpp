@@ -9,10 +9,10 @@ ParallaxBackground::ParallaxBackground(pa::World& world, int width, int height)
 	for (auto offset = 0; offset <= 1; offset++)
 	{
 		world.create<BackgroundLayer>(g_resource.background0, 500, width, height, offset, 0);
-		world.create<BackgroundLayer>(g_resource.background1, 400, width, height, offset, 1);
-		world.create<BackgroundLayer>(g_resource.background2, 300, width, height, offset, 2);
-		world.create<BackgroundLayer>(g_resource.background3, 200, width, height, offset, 3);
-		world.create<BackgroundLayer>(g_resource.background4, 100, width, height, offset, 5);
+		world.create<BackgroundLayer>(g_resource.background1, 400, width, height, offset, 2);
+		world.create<BackgroundLayer>(g_resource.background2, 300, width, height, offset, 4);
+		world.create<BackgroundLayer>(g_resource.background3, 200, width, height, offset, 6);
+		world.create<BackgroundLayer>(g_resource.background4, 100, width, height, offset, 10);
 	}
 }
 

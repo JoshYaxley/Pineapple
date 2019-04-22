@@ -1,7 +1,8 @@
 #include <Pineapple/Pineapple.h>
 
-#include "Resource.h"
 #include "ParallaxBackground.h"
+#include "Resource.h"
+#include "Floor.h"
 
 int pa::Main(pa::Arguments* arguments)
 {
@@ -11,7 +12,7 @@ int pa::Main(pa::Arguments* arguments)
 	auto width = 384;
 	auto height = 216;
 	settings.graphics.size.set(width, height);
-	settings.graphics.zoom = 2.f;
+	settings.graphics.zoom = 4.f;
 
 	auto platform = pa::Make::platform(arguments, settings);
 
@@ -26,6 +27,10 @@ int pa::Main(pa::Arguments* arguments)
 	pa::World world(platform);
 
 	world.create<ParallaxBackground>(width, height);
+	for (auto x = 0; x < width + 32; x += 16)
+	{
+		world.create<Floor>(g_resource.floor, x + 8, height - 16, 10);
+	}
 
 	// Process main loop
 	while (true)
