@@ -13,6 +13,7 @@ struct Resource
 	std::shared_ptr<pa::Texture> floor;
 
 	std::shared_ptr<pa::Texture> playerRunning;
+	std::shared_ptr<pa::Texture> playerJumping;
 	
 	void create(std::shared_ptr<pa::Platform> platform);
 };

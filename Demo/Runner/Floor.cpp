@@ -14,6 +14,6 @@ void Floor::onStep(pa::Time deltaTime) {
 	const auto position = getPositionConst();
 	if (position.x <= -8)
 	{
-		setPosition(392, position.y);
+		setPosition(position.x + 384 + 32, position.y);
 	}
 }

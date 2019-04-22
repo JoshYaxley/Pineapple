@@ -38,6 +38,6 @@ void BackgroundLayer::onStep(pa::Time deltaTime) {
 	const auto position = getPositionConst();
 	if (position.x <= m_width * (m_offset - 0.5))
 	{
-		setPosition(m_width * (m_offset + 0.5), position.y);
+		setPosition(position.x + m_width, position.y);
 	}
 }
