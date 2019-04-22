@@ -24,3 +24,10 @@ Build/Android/local.properties
 
 # Mac Xcode
 *.DS_Store
+
+builddir
+builddir.DotSettings.user
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
+.vs/Pineapple/v16/Browse.VC.opendb
+.vs/ProjectSettings.json

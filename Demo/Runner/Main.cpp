@@ -1,13 +1,16 @@
 #include <Pineapple/Pineapple.h>
 
 #include "Resource.h"
+#include "ParallaxBackground.h"
 
 int pa::Main(pa::Arguments* arguments)
 {
 	// Start up platform
 	pa::PlatformSettings settings;
 	settings.title = "Jungle Run";
-	settings.graphics.size.set(384, 216);
+	auto width = 384;
+	auto height = 216;
+	settings.graphics.size.set(width, height);
 	settings.graphics.zoom = 2.f;
 
 	auto platform = pa::Make::platform(arguments, settings);
@@ -22,11 +25,7 @@ int pa::Main(pa::Arguments* arguments)
 	// Initialise the platform
 	pa::World world(platform);
 
-	world.create<Background>(g_resource.background0);
-	world.create<Background>(g_resource.background1);
-	world.create<Background>(g_resource.background2);
-	world.create<Background>(g_resource.background3);
-	world.create<Background>(g_resource.background4);
+	world.create<ParallaxBackground>(width, height);
 
 	// Process main loop
 	while (true)
