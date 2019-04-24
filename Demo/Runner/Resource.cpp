@@ -14,4 +14,6 @@ void Resource::create(std::shared_ptr<pa::Platform> platform)
 
 	playerRunning = platform->getGraphics()->createTexture("playerRunning.png");
 	playerJumping = platform->getGraphics()->createTexture("playerJumping.png");
+
+	snake = platform->getGraphics()->createTexture("snake.png");
 }

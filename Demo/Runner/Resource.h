@@ -14,6 +14,8 @@ struct Resource
 
 	std::shared_ptr<pa::Texture> playerRunning;
 	std::shared_ptr<pa::Texture> playerJumping;
+
+	std::shared_ptr<pa::Texture> snake;
 	
 	void create(std::shared_ptr<pa::Platform> platform);
 };

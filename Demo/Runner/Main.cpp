@@ -4,6 +4,8 @@
 #include "Resource.h"
 #include "Floor.h"
 #include "Player.h"
+#include "Enemy.h"
+#include "EnemySpawner.h"
 
 int pa::Main(pa::Arguments* arguments)
 {
@@ -30,9 +32,10 @@ int pa::Main(pa::Arguments* arguments)
 	world.create<ParallaxBackground>(width, height);
 	for (auto x = 0; x < width + 32; x += 16)
 	{
-		world.create<Floor>(g_resource.floor, x + 8, height - 16, 10);
+		world.create<Floor>(g_resource.floor, x + 8, height - 16, 30);
 	}
 	world.create<Player>(g_resource.playerRunning, 64, height - 48);
+	world.create<EnemySpawner>();
 
 	// Process main loop
 	while (true)
