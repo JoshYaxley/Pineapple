@@ -1,5 +1,7 @@
 #include "Player.h"
 #include "Resource.h"
+#include "Enemy.h"
+#include <spdlog/logger.h>
 
 Player::Player(pa::World& world, std::shared_ptr<pa::Texture> texture, int x, int y)
 	: pa::Entity(world)

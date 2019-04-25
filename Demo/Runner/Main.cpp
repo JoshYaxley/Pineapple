@@ -1,11 +1,7 @@
 #include <Pineapple/Pineapple.h>
 
-#include "ParallaxBackground.h"
 #include "Resource.h"
-#include "Floor.h"
-#include "Player.h"
-#include "Enemy.h"
-#include "EnemySpawner.h"
+#include "Level.h"
 
 int pa::Main(pa::Arguments* arguments)
 {
@@ -29,13 +25,7 @@ int pa::Main(pa::Arguments* arguments)
 	// Initialise the platform
 	pa::World world(platform);
 
-	world.create<ParallaxBackground>(width, height);
-	for (auto x = 0; x < width + 32; x += 16)
-	{
-		world.create<Floor>(g_resource.floor, x + 8, height - 16, 30);
-	}
-	world.create<Player>(g_resource.playerRunning, 64, height - 48);
-	world.create<EnemySpawner>();
+	world.create<Level>();
 
 	// Process main loop
 	while (true)

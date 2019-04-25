@@ -3,6 +3,7 @@
 
 Enemy::Enemy(pa::World& world, int x, int y, int speed)
 	: Entity(world)
+	, pa::EnableChildList<Enemy>(world)
 {
 	setPosition(x, y);
 	setVelocity(speed * -1, 0);
